@@ -31,7 +31,6 @@ if __name__ == "__main__":
     for line in sys.stdin:
         if line.strip() != "":
             columns = line.strip().split('\t')
-
             for r in regexs:
                 columns[target_index] = re.sub(r'%s' % r[0], r[1], columns[target_index].strip())
 
